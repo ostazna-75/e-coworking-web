@@ -1,0 +1,7 @@
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #b882bf;
+  flex: 1;
+  min-height: 100vh;
+}
