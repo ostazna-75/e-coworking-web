@@ -23,22 +23,21 @@ const Logo = () => {
 const NavBarRight = () => {
   return (
     <divrightnav className="NavBarRight">
-      <button>
-        <p>Espaces</p>
-      </button>
-      <button>
-        <p>Around Me</p>
-      </button>
-      <button>
-        <p>Sign Up</p>
-      </button>
-      <button>
-        <p>Search</p>
-      </button>
-      <button>
-        <p>Mail</p>
-      </button>
+      <NavButton title="Espaces" />
+      <NavButton title="Around Me" />
+      <NavButton title="Sign UP" />
+      <NavButton title="Search" />
+      <NavButton title="Mail" />
+      <NavButton />
     </divrightnav>
+  );
+};
+
+const NavButton = ({ title = "" }) => {
+  return (
+    <button>
+      <p>{title}</p>
+    </button>
   );
 };
 
