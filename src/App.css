@@ -1,7 +1,41 @@
+@font-face {
+  font-family: "FallisComing";
+  src: url("./Assets/Fonts/FallisComing.ttf");
+}
+
+@font-face {
+  font-family: "Mont-HeavyDEMO";
+  src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
+}
+
 .MainContainer {
   display: flex;
   flex-direction: column;
   background-color: #b882bf;
   flex: 1;
   min-height: 100vh;
+  margin: 0 20%;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.NavBarRight {
+  display: flex;
+  flex-direction: row;
+}
+.Logo {
+  color: white;
+}
+.Eco {
+  font-family: "FallisComing";
+  font-size: 24pt;
+}
+/* Logo:nth-child(2) est le numéro qui vient après first child  */
+.Working {
+  font-family: "Mont-HeavyDEMO";
+  font-size: 18pt;
 }
