@@ -39,3 +39,8 @@
   font-family: "Mont-HeavyDEMO";
   font-size: 18pt;
 }
+
+.ButtonNavBar {
+  background-color: transparent;
+  border: transparent;
+}

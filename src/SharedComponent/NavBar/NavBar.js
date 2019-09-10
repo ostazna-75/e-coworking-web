@@ -35,7 +35,7 @@ const NavBarRight = () => {
 
 const NavButton = ({ title = "" }) => {
   return (
-    <button>
+    <button className="ButtonNavBar">
       <p>{title}</p>
     </button>
   );
