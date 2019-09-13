@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NavButton from "./Components/NavButton";
+import LandingButton from "../../Views/1-Landing/Components/LandingButton";
 
 const NavBar = () => {
   return (
@@ -35,6 +36,8 @@ const NavBarRight = () => {
       <NavButton title="Sign UP" />
       <NavButton title="Search" />
       <NavButton title="Mail" />
+      <LandingButton title="Découvrez les Espaces" />
+      <LandingButton title="Map" />
       <NavButton />
     </RightNav>
   );
@@ -61,5 +64,7 @@ const RightNav = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+/* Discover and MAP */
 
 export default NavBar;
