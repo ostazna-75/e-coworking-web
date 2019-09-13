@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "FallisComing";
+  src: url("./Assets/Fonts/FallisComing.ttf");
+}
+
+@font-face {
+  font-family: "Mont-HeavyDEMO";
+  src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
+}
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url("./Assets/Fonts/SFUIDisplay-Heavy.ttf");
+}
+
+/* Photo Slide 1 + Gradient color + Fond arrière Noir */
+.SlideOne {
+  background-image: linear-gradient(
+      to right,
+      #1f5c4be1,
+      #04161ac9,
+      #04161a,
+      #04161a00,
+      #04161a00,
+      #04161a00
+    ),
+    url(../src/Views/1-Landing/Image/PageFirstBrouillonpngcup.png);
+  background-size: contain;
+  background-position: right;
+  background-color: black;
+  background-repeat: no-repeat;
+}
+
+/* container de background violet */
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  /* background-image: url(../src/Views/1-Landing/Image/PageFirstBrouillonpng.png); */
+  /*   background-color: #b882bf; */
+  flex: 1;
+  min-height: 100vh;
+  margin: 0 10%;
+}
+/* bar de navigation total */
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+/* bar de navigation droite */
+.NavBarRight {
+  display: flex;
+  flex-direction: row;
+}
+
+/* button de bar de navigation droite */
+.ButtonNavBar {
+  font-family: "SFUIDisplay";
+  color: white;
+  background-color: transparent;
+  border: transparent;
+}
+/* survol souris   color: #ffe699  */
+.ButtonNavBar p:hover {
+  color: #ffe699;
+  cursor: pointer;
+}
+
+/* logo Ecriture NAV */
+.Logo {
+  color: white;
+}
+/* Logo : écriture "E" */
+.Eco {
+  font-family: "FallisComing";
+  font-size: 24pt;
+  /*   font-weight: bold; */
+}
+/* Logo:nth-child(2) est le numéro qui vient après first child  */
+/* Logo : tiré entre E et Co */
+.Tiré {
+  font-family: "FallisComing";
+  font-size: 24pt;
+  color: #ffe699;
+  font-weight: bold;
+}
+/* Logo : écriture "co" */
+.Co {
+  font-family: "FallisComing";
+  font-size: 28pt;
+  margin-left: 2px;
+  font-weight: bold;
+}
+/* Logo : écriture "WorkING" */
+.W {
+  font-family: "Mont-HeavyDEMO";
+  font-size: 18pt;
+  margin-left: 4px;
+}
+.orking {
+  font-family: "Mont-HeavyDEMO";
+  font-size: 18pt;
+}
+/* Logo écriture SLIDE */
+.LogoSlide {
+  color: white;
+  margin-top: 6%;
+}
+
+.Eslide {
+  font-family: "FallisComing";
+  font-size: 54pt;
+  /*   font-weight: bold; */
+}
+
+.TiréSlide {
+  font-family: "FallisComing";
+  font-size: 44pt;
+  color: #ffe699;
+  font-weight: bold;
+}
+
+.CoSlide {
+  font-family: "FallisComing";
+  font-size: 64pt;
+  margin-left: 2px;
+}
+/* Contain de Working dans SLIDE */
+.LogoSlideWorking {
+  color: white;
+}
+
+.Wslide {
+  font-family: "Mont-HeavyDEMO";
+  font-size: 65pt;
+}
+
+.OrkingSlide {
+  font-family: "Mont-HeavyDEMO";
+  font-size: 60pt;
+  margin-left: -2%;
+  text-decoration-color: #ffe699;
+}
+
+.wordeco {
+  font-family: "SFUIDisplay";
+  color: white;
+  font-size: 17px;
+}
+
+/* slide TWO */
+.Laptop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../src/Views/2-Welcome/LaptopDesktop.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+/* parent */
+
+/* titleslidetwo */
+.TitleSlideTwo {
+  font-family: "SFUIDisplay";
+  color: #216151;
+  font-size: 22pt;
+  text-align: center;
+}
