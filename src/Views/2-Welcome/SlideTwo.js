@@ -5,7 +5,7 @@ import background from "./LaptopDesktop.jpg";
 const SlideTwo = () => {
 	return (
 		<StyledSlide>
-			<p className="TitleSlideTwo">
+			<p>
 				Explorer tous les <br /> Coworking et devenez un <br /> E-co Worker
 			</p>
 			<button>Continue</button>
