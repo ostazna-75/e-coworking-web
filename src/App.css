@@ -41,42 +41,7 @@
   min-height: 100vh;
   margin: 0 10%;
 }
-/* bar de navigation total */
-.NavBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1%;
-}
-/* bar de navigation droite */
-.NavBarRight {
-  display: flex;
-  flex-direction: row;
-}
 
-/* button de bar de navigation droite */
-.ButtonNavBar {
-  font-family: "SFUIDisplay";
-  color: white;
-  background-color: transparent;
-  border: transparent;
-}
-/* survol souris   color: #ffe699  */
-.ButtonNavBar p:hover {
-  color: #ffe699;
-  cursor: pointer;
-}
-
-/* logo Ecriture NAV */
-.Logo {
-  color: white;
-}
-/* Logo : écriture "E" */
-.Eco {
-  font-family: "FallisComing";
-  font-size: 24pt;
-  /*   font-weight: bold; */
-}
 /* Logo:nth-child(2) est le numéro qui vient après first child  */
 /* Logo : tiré entre E et Co */
 .Tiré {

@@ -1,48 +1,65 @@
 import React from "react";
+import styled from "styled-components";
+import NavButton from "./Components/NavButton";
 
 const NavBar = () => {
   return (
-    <nav className="NavBar">
+    <NavStyleBar>
       {/* LOGO A GAUCHE  */}
       <Logo />
       {/* nav bar à droite */}
       <NavBarRight />
-    </nav>
+    </NavStyleBar>
   );
 };
 
 /* Logo E-co Working */
 const Logo = () => {
   return (
-    <divlogo className="Logo">
-      <span className="Eco">E</span>
+    <LogoNav>
+      <Eco>E</Eco>
       <span className="Tiré">-</span>
       <span className="Co">co</span>
       <span className="W">W</span>
       <span className="orking">orkING</span>
-    </divlogo>
+    </LogoNav>
   );
 };
-/* Naigation bar Droite  */
+
+/* Navigation bar Droite  */
 const NavBarRight = () => {
   return (
-    <divrightnav className="NavBarRight">
+    <RightNav>
       <NavButton title="Espaces" />
       <NavButton title="Around Me" />
       <NavButton title="Sign UP" />
       <NavButton title="Search" />
       <NavButton title="Mail" />
       <NavButton />
-    </divrightnav>
+    </RightNav>
   );
 };
 
-const NavButton = ({ title = "" }) => {
-  return (
-    <button className="ButtonNavBar">
-      <p>{title}</p>
-    </button>
-  );
-};
+/* STYLE CSS Nouvelle méthode : styled.component */
+/* bar de navigation droite */
+const NavStyleBar = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1%;
+`;
+const LogoNav = styled.div`
+  color: white;
+`;
+
+const Eco = styled.span`
+  font-family: "FallisComing";
+  font-size: 24pt;
+`;
+
+const RightNav = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export default NavBar;
