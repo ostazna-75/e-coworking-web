@@ -11,15 +11,19 @@ const NavBar = () => {
   );
 };
 
+/* Logo E-co Working */
 const Logo = () => {
   return (
     <divlogo className="Logo">
-      <span className="Eco">E-co</span>
-      <span className="Working">Working</span>
+      <span className="Eco">E</span>
+      <span className="Tiré">-</span>
+      <span className="Co">co</span>
+      <span className="W">W</span>
+      <span className="orking">orkING</span>
     </divlogo>
   );
 };
-
+/* Naigation bar Droite  */
 const NavBarRight = () => {
   return (
     <divrightnav className="NavBarRight">
