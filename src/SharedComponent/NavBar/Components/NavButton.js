@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const NavButton = ({ title = "" }) => {
+const NavButton = ({ title = "", icon = "" }) => {
+  let text = null;
+  if (icon !== "") {
+    text = icon;
+  } else {
+    text = title;
+  }
   return (
     <StyleButton>
-      <p>{title}</p>
+      <p>{text}</p>
     </StyleButton>
   );
 };
@@ -21,5 +27,9 @@ const StyleButton = styled.button`
     cursor: pointer;
   }
 `;
+
+/* style des icones */
+
+/* si icone différent !=== "", alors on affiche icone n sinon le texte */
 
 export default NavButton;
