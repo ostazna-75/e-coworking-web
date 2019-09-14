@@ -1,104 +1,135 @@
 @font-face {
-	font-family: "FallisComing";
-	src: url("./Assets/Fonts/FallisComing.ttf");
+  font-family: "FallisComing";
+  src: url("./Assets/Fonts/FallisComing.ttf");
 }
 
 @font-face {
-	font-family: "Mont-HeavyDEMO";
-	src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
+  font-family: "Mont-HeavyDEMO";
+  src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
 }
 
 @font-face {
-	font-family: "SFUIDisplay";
-	src: url("./Assets/Fonts/SFUIDisplay-Heavy.ttf");
+  font-family: "SFUIDisplay";
+  src: url("./Assets/Fonts/SFUIDisplay-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "Bradhitc";
+  src: url("./Assets/Fonts/bradhitc.ttf");
+}
+
+@font-face {
+  font-family: "Ahroni";
+  src: url("./Assets/Fonts/ahronbd.ttf");
 }
 
 /* Photo Slide 1 + Gradient color + Fond arrière Noir */
 .SlideOne {
-	background-image: linear-gradient(
-			to right,
-			#1f5c4be1,
-			#04161ac9,
-			#04161a,
-			#04161a00,
-			#04161a00,
-			#04161a00
-		),
-		url(../src/Views/1-Landing/Image/PageFirstBrouillonpngcup.png);
-	background-size: contain;
-	background-position: right;
-	background-color: black;
-	background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      #1f5c4be1,
+      #04161ac9,
+      #04161a,
+      #04161a00,
+      #04161a00,
+      #04161a00
+    ),
+    url(../src/Views/1-Landing/Image/PageFirstBrouillonpngcup.png);
+  background-size: contain;
+  background-position: right;
+  background-color: black;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 /* Logo:nth-child(2) est le numéro qui vient après first child  */
 /* Logo : tiré entre E et Co */
 .Tiré {
-	font-family: "FallisComing";
-	font-size: 24pt;
-	color: #ffe699;
-	font-weight: bold;
+  font-family: "FallisComing";
+  font-size: 24pt;
+  color: #ffe699;
+  font-weight: bold;
 }
 /* Logo : écriture "co" */
 .Co {
-	font-family: "FallisComing";
-	font-size: 28pt;
-	margin-left: 2px;
-	font-weight: bold;
+  font-family: "FallisComing";
+  font-size: 28pt;
+  margin-left: 2px;
+  font-weight: bold;
 }
 /* Logo : écriture "WorkING" */
 .W {
-	font-family: "Mont-HeavyDEMO";
-	font-size: 18pt;
-	margin-left: 4px;
+  font-family: "Mont-HeavyDEMO";
+  font-size: 18pt;
+  margin-left: 4px;
 }
 .orking {
-	font-family: "Mont-HeavyDEMO";
-	font-size: 18pt;
+  font-family: "Mont-HeavyDEMO";
+  font-size: 18pt;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffe699;
+}
+
+.dotLogo {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #ffe699;
 }
 /* Logo écriture SLIDE */
 .LogoSlide {
-	color: white;
-	margin-top: 6%;
+  color: white;
+  margin-top: 6%;
 }
 
 .Eslide {
-	font-family: "FallisComing";
-	font-size: 54pt;
-	/*   font-weight: bold; */
+  font-family: "FallisComing";
+  font-size: 54pt;
+  /*   font-weight: bold; */
 }
 
 .TiréSlide {
-	font-family: "FallisComing";
-	font-size: 44pt;
-	color: #ffe699;
-	font-weight: bold;
+  font-family: "FallisComing";
+  font-size: 44pt;
+  color: #ffe699;
+  font-weight: bold;
 }
 
 .CoSlide {
-	font-family: "FallisComing";
-	font-size: 64pt;
-	margin-left: 2px;
+  font-family: "FallisComing";
+  font-size: 64pt;
+  margin-left: 2px;
 }
 /* Contain de Working dans SLIDE */
 .LogoSlideWorking {
-	color: white;
+  color: white;
 }
 
 .Wslide {
-	font-family: "Mont-HeavyDEMO";
-	font-size: 65pt;
+  font-family: "Mont-HeavyDEMO";
+  font-size: 65pt;
 }
 
 .OrkingSlide {
-	font-family: "Mont-HeavyDEMO";
-	font-size: 60pt;
-	margin-left: -2%;
-	text-decoration-color: #ffe699;
+  font-family: "Mont-HeavyDEMO";
+  font-size: 60pt;
+  margin-left: -2%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffe699;
 }
 
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid #ffe699;
+  border-radius: 50%;
+  display: inline-block;
+}
 .wordeco {
-	font-family: "SFUIDisplay";
-	color: white;
-	font-size: 17px;
+  font-family: "SFUIDisplay";
+  color: white;
+  font-size: 17px;
 }
