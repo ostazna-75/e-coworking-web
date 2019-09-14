@@ -1,32 +1,43 @@
 @font-face {
-	font-family: "FallisComing";
-	src: url("./Assets/Fonts/FallisComing.ttf");
+  font-family: "FallisComing";
+  src: url("./Assets/Fonts/FallisComing.ttf");
 }
 
 @font-face {
-	font-family: "Mont-HeavyDEMO";
-	src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
+  font-family: "Mont-HeavyDEMO";
+  src: url("./Assets/Fonts/Mont-HeavyDEMO.ttf");
 }
 
 @font-face {
-	font-family: "SFUIDisplay";
-	src: url("./Assets/Fonts/SFUIDisplay-Heavy.ttf");
+  font-family: "SFUIDisplay";
+  src: url("./Assets/Fonts/SFUIDisplay-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "Bradhitc";
+  src: url("./Assets/Fonts/bradhitc.ttf");
+}
+
+@font-face {
+  font-family: "Ahroni";
+  src: url("./Assets/Fonts/ahronbd.ttf");
 }
 
 /* Photo Slide 1 + Gradient color + Fond arrière Noir */
 .SlideOne {
-	background-image: linear-gradient(
-			to right,
-			#1f5c4be1,
-			#04161ac9,
-			#04161a,
-			#04161a00,
-			#04161a00,
-			#04161a00
-		),
-		url(../src/Views/1-Landing/Image/PageFirstBrouillonpngcup.png);
-	background-size: contain;
-	background-position: right;
-	background-color: black;
-	background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      #1f5c4be1,
+      #04161ac9,
+      #04161a,
+      #04161a00,
+      #04161a00,
+      #04161a00
+    ),
+    url(../src/Views/1-Landing/Image/PageFirstBrouillonpngcup.png);
+  background-size: contain;
+  background-position: right;
+  background-color: black;
+  background-repeat: no-repeat;
+  position: relative;
 }

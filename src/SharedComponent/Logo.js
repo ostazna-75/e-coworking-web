@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 /* Logo E-co Working */
+
 const Logo = ({ big }) => {
 	return (
 		<LogoNav big={big}>
@@ -61,6 +62,7 @@ const Dot = styled.span`
 	border-radius: 50%;
 	display: inline-block;
 	border: 1px solid #ffe699;
+
 `;
 
 export default Logo;
