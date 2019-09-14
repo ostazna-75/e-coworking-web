@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "../../SharedComponent/NavBar/NavBar";
 import Container from "../../SharedComponent/Container";
 import LandingButton from "./Components/LandingButton";
+import NavBar from "../../SharedComponent/NavBar/NavBar";
 
 const SlideOne = () => {
   return (
     <div className="SlideOne">
+      <NavBar slide={true} />
+
       <Container>
-        <NavBar />
         <divlogoslide className="LogoSlide">
           <span className="Eslide">E</span>
           <span className="TiréSlide">-</span>
