@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Container from "../../SharedComponent/Container";
 import LandingButton from "./Components/LandingButton";
+import Logo from "../../SharedComponent/Logo";
 import NavBar from "../../SharedComponent/NavBar/NavBar";
 
 const SlideOne = () => {
@@ -10,15 +11,7 @@ const SlideOne = () => {
       <NavBar slide={true} />
 
       <Container>
-        <divlogoslide className="LogoSlide">
-          <span className="Eslide">E</span>
-          <span className="TiréSlide">-</span>
-          <span className="CoSlide">co</span>
-          <br />
-          <span className="Wslide">W</span>
-          <span className="OrkingSlide">orkING</span>
-          <span class="dot"></span>
-        </divlogoslide>
+   <Logo big />
         <Paragraph>
           <p>
             Que vous soyez un élève,
