@@ -8,16 +8,16 @@ import useModal from "./Hooks/useModal";
 import SignUp from "./Views/8-SignUp/SignUp";
 
 function App() {
-  const { isShowing, toggle } = useModal();
+  /* const { isShowing, toggle } = useModal(); */
 
   return (
     <div style={{ position: "relative" }}>
-      <Modal isShowing={isShowing} hide={toggle}>
+      {/* <Modal isShowing={isShowing} hide={toggle}>
         <SignUp />
-      </Modal>
+      </Modal> */}
       <NavBar />
       <SlideOne />
-      <SlideTwo /> <button onClick={toggle}>ouiououoi</button>
+      <SlideTwo /> {/* <button onClick={toggle}>ouiououoi</button> */}
     </div>
   );
 }
