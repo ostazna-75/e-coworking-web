@@ -2,25 +2,34 @@ import React from "react";
 import styled from "styled-components";
 import NavButton from "./Components/NavButton";
 import Logo from "../Logo";
+import Modal from "../Modal";
+import SignUp from "../../Views/8-SignUp/SignUp";
+import useModal from "../../Hooks/useModal";
 
 const NavBar = ({ slide = false }) => {
+  const { isShowing, toggle } = useModal();
   return (
-    <NavStyleBar slide={slide}>
-      {/* LOGO A GAUCHE  */}
-      <Logo />
-      {/* nav bar à droite */}
-      <NavBarRight />
-    </NavStyleBar>
+    <>
+      <NavStyleBar slide={slide}>
+        {/* LOGO A GAUCHE  */}
+        <Logo />
+        {/* nav bar à droite */}
+        <NavBarRight showSignUp={toggle} />
+      </NavStyleBar>
+      <Modal isShowing={isShowing} hide={toggle}>
+        <SignUp />
+      </Modal>
+    </>
   );
 };
 
 /* Navigation bar Droite  */
-const NavBarRight = () => {
+const NavBarRight = ({ showSignUp }) => {
   return (
     <RightNav>
       <NavButton title="Espaces" />
       <NavButton title="Around Me" />
-      <NavButton title="Sign UP" />
+      <NavButton title="Sign UP" action={showSignUp} />
       <NavButton icon="search" />
       <NavButton icon="mail" />
 
