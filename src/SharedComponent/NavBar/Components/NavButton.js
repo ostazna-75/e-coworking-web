@@ -3,17 +3,34 @@ import styled from "styled-components";
 import search from "../../../Assets/Images/search.png";
 import mail from "../../../Assets/Images/mail.png";
 
-const NavButton = ({ title = "", icon = "" }) => {
+const NavButton = ({
+  title = "",
+  icon = "",
+  action = () => {
+    alert("yo");
+  }
+}) => {
   if (icon !== "") {
-    return (
-      <div>
-        <StyleIcon src={icon === "search" ? search : mail} />
-        {/* ? : si icon est soarch sinon mail (if else) */}
-      </div>
-    );
+    if (icon === "mail") {
+      return (
+        <div>
+          <a href="mailto:islam.elsharkawy@hotmail.com">
+            <StyleIcon src={mail} />
+          </a>
+          ;{/* ? : si icon est soarch sinon mail (if else) */}
+        </div>
+      );
+    } else {
+      return (
+        <div onClick={action}>
+          <StyleIcon src={search} />;
+          {/* ? : si icon est soarch sinon mail (if else) */}
+        </div>
+      );
+    }
   } else {
     return (
-      <StyleButton>
+      <StyleButton onClick={action}>
         <p>{title}</p>
       </StyleButton>
     );
