@@ -1,48 +1,74 @@
 import React from "react";
+import styled from "styled-components";
+import NavButton from "./Components/NavButton";
+import Logo from "../Logo";
 
-const NavBar = () => {
+const NavBar = ({ slide = false }) => {
   return (
-    <nav className="NavBar">
+    <NavStyleBar slide={slide}>
       {/* LOGO A GAUCHE  */}
       <Logo />
       {/* nav bar à droite */}
       <NavBarRight />
-    </nav>
+    </NavStyleBar>
   );
 };
 
-/* Logo E-co Working */
-const Logo = () => {
-  return (
-    <divlogo className="Logo">
-      <span className="Eco">E</span>
-      <span className="Tiré">-</span>
-      <span className="Co">co</span>
-      <span className="W">W</span>
-      <span className="orking">orkING</span>
-    </divlogo>
-  );
-};
-/* Naigation bar Droite  */
+/* Navigation bar Droite  */
 const NavBarRight = () => {
   return (
-    <divrightnav className="NavBarRight">
+    <RightNav>
       <NavButton title="Espaces" />
       <NavButton title="Around Me" />
       <NavButton title="Sign UP" />
-      <NavButton title="Search" />
-      <NavButton title="Mail" />
+      <NavButton icon="search" />
+      <NavButton icon="mail" />
+
       <NavButton />
-    </divrightnav>
+    </RightNav>
   );
 };
 
-const NavButton = ({ title = "" }) => {
-  return (
-    <button className="ButtonNavBar">
-      <p>{title}</p>
-    </button>
-  );
-};
+/* STYLE CSS Nouvelle méthode : styled.component */
+/* bar de navigation droite */
+const NavStyleBar = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
+  left: 0;
+  flex: 1;
+  padding: 0 10%;
+  position: ${props => (props.slide ? "relative" : "fixed")};
+  width: 100%;
+  box-sizing: border-box;
+  /* lineargradient */
+  background-image: ${props =>
+    props.slide
+      ? ""
+      : `
+  linear-gradient(
+    to right,
+#1f5c4be1,
+#04161ac9,
+#04161a,
+#04161a00,
+#04161a00,
+#04161a00
+  )`};
+
+  background-color: ${props => (props.slide ? "trasnparent" : "#031517")};
+`;
+
+const RightNav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+/* Discover and MAP */
 
 export default NavBar;
