@@ -4,6 +4,8 @@ import Container from "../../SharedComponent/Container";
 import LandingButton from "./Components/LandingButton";
 import Logo from "../../SharedComponent/Logo";
 import NavBar from "../../SharedComponent/NavBar/NavBar";
+import { Paragraph } from "../../SharedComponent/WithStyle";
+/* dans le fichier withstyle, il recherche un export Paragraph */
 
 const SlideOne = () => {
   return (
@@ -11,7 +13,7 @@ const SlideOne = () => {
       <NavBar slide={true} />
 
       <Container>
-   <Logo big />
+        <Logo big />
         <Paragraph>
           <p>
             Que vous soyez un élève,
@@ -37,12 +39,6 @@ const SlideOne = () => {
     </div>
   );
 };
-
-const Paragraph = styled.div`
-  font-family: "SFUIDisplay";
-  color: white;
-  font-size: 17px;
-`;
 
 const Buttons = styled.div`
   margin-top: 40px;
