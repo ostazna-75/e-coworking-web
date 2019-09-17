@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import SlideOne from "./Views/1-Landing/SlideOne";
 import SlideTwo from "./Views/2-Welcome/SlideTwo";
+import SlideThree from "./Views/3-Download/SlideThree";
 import NavBar from "./SharedComponent/NavBar/NavBar";
 import Modal from "./SharedComponent/Modal";
 import useModal from "./Hooks/useModal";
@@ -17,7 +18,9 @@ function App() {
       </Modal> */}
       <NavBar />
       <SlideOne />
-      <SlideTwo /> {/* <button onClick={toggle}>ouiououoi</button> */}
+      <SlideTwo />
+      {/* <button onClick={toggle}>ouiououoi</button> */}
+      <SlideThree />
     </div>
   );
 }
