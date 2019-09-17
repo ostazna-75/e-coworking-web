@@ -11,7 +11,7 @@ const SlideTwo = () => {
       </p>
 
       <button>
-        <img src={arrow} />
+        <img src={arrow} alt="arrow" />
         <p>Continue</p>
       </button>
     </StyledSlide>
