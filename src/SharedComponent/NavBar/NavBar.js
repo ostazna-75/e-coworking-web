@@ -68,7 +68,7 @@ const NavStyleBar = styled.nav`
 #04161a00
   )`};
 
-  background-color: ${props => (props.slide ? "trasnparent" : "#031517")};
+  background-color: ${props => (props.slide ? "transparent" : "#031517")};
 `;
 
 const RightNav = styled.div`
