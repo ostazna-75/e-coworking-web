@@ -32,7 +32,9 @@ const SignUp = () => {
           <WordUp>
             <Title>{newinfo ? "S'INSCRIRE" : "SALUT"}</Title>
             <Description>
-              Vous pouvez vous connectez à votre compte E-co Working ici
+              {newinfo
+                ? "Nous sommes heureux que vous soyez ici!"
+                : " Vous pouvez vous connectez à votre compte E-co Working ici"}
             </Description>
             {/*  SOCIAL CLICK  */}
             <Social>
@@ -80,22 +82,37 @@ const SignUp = () => {
                   <EyePass src={Eye} alt="Eye for lock" /> */}
                 </StyleInput>
               </Containers>
+              {/* CONDITION UTILISATION */}
+              {newinfo ? (
+                <div>Condition</div>
+              ) : (
+                <WordPass>Mot de passe oublié ?</WordPass>
+              )}
               {/* ------------------------*/}
               {/* --Mot de passe oublié-- */}
-              <WordPass>Mot de passe oublié ?</WordPass>
+
               {/* la partie blanche de gauche */}
 
               <IdentifyWord onClick={submit}>
-                <p>S'identifier</p>
+                {newinfo ? "S'inscrire" : "S'identifier"}
               </IdentifyWord>
             </form>
           </WordUp>
         </ContainLeft>
         {/* CONTAINER PARTIE DROITE  */}
         <ContainRight>
-          <NewHere>NOUVEAU ICI ?</NewHere>
-          <RegisterOrder>Inscrivez-vous</RegisterOrder>
-          <Adhere onClick={() => setNewinfo(true)}>S’inscrire</Adhere>
+          <NewHere>
+            {newinfo
+              ? `VOUS AVEZ DEJA 
+            UN COMPTE ?`
+              : "NOUVEAU ICI ?"}
+          </NewHere>
+          <RegisterOrder>
+            {newinfo ? "Connectez-vous" : "Inscrivez-vous"}
+          </RegisterOrder>
+          <Adhere onClick={() => setNewinfo(newinfo ? false : true)}>
+            {newinfo ? "Se Connecter" : "S’inscrire"}
+          </Adhere>
           {/* Incorporer le logo ici */}
           <LogoDown>
             <Logo />
