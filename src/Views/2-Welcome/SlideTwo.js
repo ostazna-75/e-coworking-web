@@ -2,39 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import background from "./Image/LaptopDesktop.jpg";
 import arrow from "./Image/arrow.png";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 const SlideTwo = () => {
-  const [chef, setChef] = useState("");
-
-  //useEffect permettre de changer le State ( de le faire évoluer )
-  useEffect(() => {
-    // async: Tout simplement il permet d'utiliser await, il est la pour le droit d'utiliser await
-    // une fois réponse await good , alors on conitnue plus bas sinon "Undefined""
-    const recupthechef = async () => {
-      // await va nous permettre d'attendre la réponse de axios, via httplocalhost
-      // une fois que c'est bon il continue sur le reste plus bas
-      const res = await axios.get("http://localhost:3000/tovo");
-      setChef(res.data);
-    };
-    recupthechef();
-    return () => {};
-  }, []);
-
-  const boss = () => {
-    alert(chef);
-  };
-
   return (
     <StyledSlide>
       <p>
         Explorer tous les <br /> Coworking et devenez un <br /> E-co Worker
       </p>
 
-      <button onClick={boss}>
+      <button onClick={() => {}}>
         <img src={arrow} alt="arrow" />
-        <p>Continue {chef}</p>
+        <p>Continue</p>
       </button>
     </StyledSlide>
   );
