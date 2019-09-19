@@ -2,15 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import background from "./Image/LaptopDesktop.jpg";
 import arrow from "./Image/arrow.png";
+import axios from "axios";
 
 const SlideTwo = () => {
+  const boss = async () => {
+    const res = await axios.get("http://localhost:3000/tovo");
+    const chef = res.data;
+    alert(chef);
+  };
+
   return (
     <StyledSlide>
       <p>
         Explorer tous les <br /> Coworking et devenez un <br /> E-co Worker
       </p>
 
-      <button>
+      <button onClick={boss}>
         <img src={arrow} alt="arrow" />
         <p>Continue</p>
       </button>
