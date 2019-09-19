@@ -153,7 +153,15 @@ const ContainSignUP = styled.div`
 const ContainLeft = styled.div`
   display: flex;
   justify-content: center;
-  background-color: white;
+  /* Mettre un gradient transparent up to bottom */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    183deg,
+    rgba(255, 255, 255, 0.5889706224286589) 0%,
+    rgba(255, 255, 255, 1) 33%
+  );
+  /*   background-image: linear-gradient(to Up, #55efc3e5, #04161a);
+  background-color: white; */
   width: 650px;
   -webkit-box-shadow: -1px 1px 20px -4px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: -1px 1px 20px -4px rgba(0, 0, 0, 0.3);
