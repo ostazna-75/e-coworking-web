@@ -84,7 +84,7 @@ const SignUp = () => {
               </Containers>
               {/* CONDITION UTILISATION */}
               {newinfo ? (
-                <div>Condition</div>
+                <Condition>Condition</Condition>
               ) : (
                 <WordPass>Mot de passe oublié ?</WordPass>
               )}
@@ -126,6 +126,8 @@ const SignUp = () => {
 /* ------------------------------------ */
 /* ------------- STYLE --------------  */
 /* ---------------------------------- */
+
+const Condition = styled.div``;
 
 const TemplateSign = styled.div`
   display: flex;
