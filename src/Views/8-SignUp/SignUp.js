@@ -7,14 +7,29 @@ import Google from "../8-SignUp/Image/Google.png";
 import IconMail from "../8-SignUp/Image/emailGrey.png";
 import Padlock from "../8-SignUp/Image/padlock.png";
 import Eye from "../8-SignUp/Image/eye.png";
+import axios from "axios";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newinfo, setNewinfo] = useState(false);
-  const submit = e => {
+  const [username, setUsername] = useState("");
+  /* submit */
+  const submit = async e => {
     e.preventDefault();
     // sa empeche le submit de t'envoyer sur une autre page ( e.preventdefault)
+    try {
+      const response = await axios.post("http://localhost:3000/user/signup", {
+        password,
+        email,
+        username
+      });
+      // toujours mettre sur le code front axios.get avec http au début
+      //En revanche ne jamais mettre http dans postman : localhost:3000/signup
+      console.log(response.data);
+    } catch (error) {
+      console.error(error.message);
+    }
     alert("email: " + email + ", password: " + password);
   };
 
@@ -60,6 +75,18 @@ const SignUp = () => {
             {/* ----Email and PAss----- */}
             <form>
               <Containers>
+                {newinfo && (
+                  <StyleInput
+                    type="text"
+                    placeholder="Comment doit-on appeler"
+                    icon={IconMail}
+                    value={username}
+                    onChange={event => setUsername(event.target.value)}
+                  >
+                    {/*  <img src={IconMail} alt="Icon e-mail" />
+                  <p>Adresse E-mail</p> */}
+                  </StyleInput>
+                )}
                 <StyleInput
                   type="text"
                   placeholder="Adresse E-mail"
