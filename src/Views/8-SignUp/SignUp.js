@@ -123,7 +123,26 @@ const SignUp = () => {
               </Containers>
               {/* CONDITION UTILISATION */}
               {newinfo ? (
-                <Condition>Condition</Condition>
+                <Condition>
+                  <StyleYesInput>
+                    <YesInput type="checkbox"></YesInput>
+                    <div>
+                      oui, j'aimerais recevoir par courrier électronique des
+                      conseils importants, des nouvelles juridiques et des
+                      offres spéciales pour mon site web.
+                    </div>
+                  </StyleYesInput>
+                  <StyleTermOfUse>
+                    <TermOfUse type="checkbox"></TermOfUse>
+                    <div>
+                      Les conditions d'utilisation d'E-co Working s'appliquent
+                    </div>
+                  </StyleTermOfUse>
+
+                  <Politic>
+                    La politique de confidentialité de E-co Working s'applique
+                  </Politic>
+                </Condition>
               ) : (
                 <WordPass>Mot de passe oublié ?</WordPass>
               )}
@@ -167,6 +186,23 @@ const SignUp = () => {
 /* ---------------------------------- */
 
 const Condition = styled.div``;
+const StyleYesInput = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const StyleTermOfUse = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const YesInput = styled.input`
+  align-items: center;
+`;
+const TermOfUse = styled.input`
+  align-items: center;
+`;
+const Politic = styled.div``;
 
 const TemplateSign = styled.div`
   display: flex;
