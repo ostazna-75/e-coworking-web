@@ -9,20 +9,19 @@ import useModal from "./Hooks/useModal";
 import SignUp from "./Views/8-SignUp/SignUp";
 
 function App() {
-  /* const { isShowing, toggle } = useModal(); */
+	const { isShowing, toggle } = useModal();
 
-  return (
-    <div style={{ position: "relative" }}>
-      {/* <Modal isShowing={isShowing} hide={toggle}>
-        <SignUp />
-      </Modal> */}
-      <NavBar />
-      <SlideOne />
-      <SlideTwo />
-      {/* <button onClick={toggle}>ouiououoi</button> */}
-      <SlideThree />
-    </div>
-  );
+	return (
+		<div style={{ position: "relative" }}>
+			<Modal isShowing={isShowing}>
+				<SignUp hide={toggle} />
+			</Modal>
+			<NavBar toggle={toggle} />
+			<SlideOne toggle={toggle} />
+			<SlideTwo />
+			<SlideThree />
+		</div>
+	);
 }
 
 export default App;
