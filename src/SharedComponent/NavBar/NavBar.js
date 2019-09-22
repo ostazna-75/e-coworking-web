@@ -29,7 +29,7 @@ const NavBarRight = ({ showSignUp }) => {
     <RightNav>
       <NavButton title="Espaces" />
       <NavButton title="Around Me" />
-      <NavButton title="Sign UP" action={showSignUp} />
+      <NavButton title="Sign IN" action={showSignUp} />
       <NavButton icon="search" />
       <NavButton icon="mail" />
 

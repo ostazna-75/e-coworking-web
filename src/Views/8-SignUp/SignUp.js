@@ -38,7 +38,7 @@ const SignUp = () => {
       {/* goupe Sign Up  */}
       <WordingSignGroup>
         <Signword>Sign</Signword>
-        <Upword>Up</Upword>
+        <Upword>{newinfo ? "UP" : "IN"}</Upword>
       </WordingSignGroup>
       {/* Countainer 2 bloc SignUp */}
       <ContainSignUP>
