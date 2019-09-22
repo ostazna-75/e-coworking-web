@@ -14,16 +14,28 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [newinfo, setNewinfo] = useState(false);
   const [username, setUsername] = useState("");
-  /* submit */
+
+  /* submit : s'identifier + se connecter */
   const submit = async e => {
     e.preventDefault();
+    let response = {};
     // sa empeche le submit de t'envoyer sur une autre page ( e.preventdefault)
+    // si newinfo alors la reponse du serveur sera signup
     try {
-      const response = await axios.post("http://localhost:3000/user/signup", {
-        password,
-        email,
-        username
-      });
+      if (newinfo) {
+        response = await axios.post("http://localhost:3000/user/signup", {
+          password,
+          email,
+          username
+        });
+        // sinon response du serveur sera signin
+      } else {
+        response = await axios.post("http://localhost:3000/user/signin", {
+          password,
+          email
+        });
+      }
+
       // toujours mettre sur le code front axios.get avec http au début
       //En revanche ne jamais mettre http dans postman : localhost:3000/signup
       console.log(response.data);
