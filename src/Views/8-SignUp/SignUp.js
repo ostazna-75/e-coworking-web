@@ -167,7 +167,12 @@ const SignUp = ({ hide, setUser }) => {
           <RegisterOrder>
             {newinfo ? "Connectez-vous" : "Inscrivez-vous"}
           </RegisterOrder>
-          <Adhere onClick={() => setNewinfo(newinfo ? false : true)}>
+          <Adhere
+            onClick={() => {
+              setNewinfo(newinfo ? false : true);
+              setErrorMessage("");
+            }}
+          >
             {newinfo ? "Se Connecter" : "S’inscrire"}
           </Adhere>
           {/* Incorporer le logo ici */}
