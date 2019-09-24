@@ -9,6 +9,7 @@ import useModal from "./Hooks/useModal";
 import SignUp from "./Views/8-SignUp/SignUp";
 import { useState } from "react";
 import ProductCategories from "./Views/4-Categories/ProductCategories";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const { isShowing, toggle } = useModal();
@@ -20,12 +21,26 @@ function App() {
         <SignUp hide={toggle} setUser={setUser} />
       </Modal>
       <NavBar toggle={toggle} username={user.username} />
-      <SlideOne toggle={toggle} username={user.username} />
-      <SlideTwo />
-      <SlideThree />
-      <ProductCategories />
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Landing toggle={toggle} username={user.username} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
+
+const Landing = (toggle, username) => {
+  return (
+    <>
+      <SlideOne toggle={toggle} username={username} />
+      <SlideTwo />
+      <SlideThree />
+      <ProductCategories />
+    </>
+  );
+};
 
 export default App;
