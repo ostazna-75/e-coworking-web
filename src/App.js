@@ -17,10 +17,12 @@ function App() {
 
   return (
     <div style={{ position: "relative" }}>
+      {/* en dehors du router */}
       <Modal isShowing={isShowing}>
         <SignUp hide={toggle} setUser={setUser} />
       </Modal>
       <NavBar toggle={toggle} username={user.username} />
+      {/* la ou on va mettre les pages: pages 1, pages 2, pages3, pages4 */}
       <Router>
         <Switch>
           <Route path="/">
