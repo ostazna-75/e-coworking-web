@@ -7,10 +7,10 @@ import NavBar from "../../SharedComponent/NavBar/NavBar";
 import { Paragraph } from "../../SharedComponent/WithStyle";
 /* dans le fichier withstyle, il recherche un export Paragraph */
 
-const SlideOne = () => {
+const SlideOne = ({ toggle, username }) => {
   return (
     <div className="SlideOne">
-      <NavBar slide={true} />
+      <NavBar slide={true} toggle={toggle} username={username} />
 
       <Container>
         <Logo big />
@@ -19,9 +19,9 @@ const SlideOne = () => {
             Que vous soyez un élève,
             <br /> une startup , une association ou une grande
             <br />
-            entreprise en développement, découvrez des espaces
-            <br /> qui permettront de faire un travail qui a du sens et un
-            impact.
+            entreprise en développement, découvrez des
+            <br /> espaces qui permettront de faire un travail qui a <br />
+            du sens et un impact.
           </p>
         </Paragraph>
         <Buttons>

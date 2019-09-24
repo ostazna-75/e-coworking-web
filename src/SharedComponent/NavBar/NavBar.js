@@ -3,28 +3,31 @@ import styled from "styled-components";
 import NavButton from "./Components/NavButton";
 import Logo from "../Logo";
 
-const NavBar = ({ slide = false }) => {
+const NavBar = ({ slide = false, toggle, username = "" }) => {
   return (
-    <NavStyleBar slide={slide}>
-      {/* LOGO A GAUCHE  */}
-      <Logo />
-      {/* nav bar à droite */}
-      <NavBarRight />
-    </NavStyleBar>
+    <>
+      <NavStyleBar slide={slide}>
+        {/* LOGO A GAUCHE  */}
+        <Logo />
+        {/* nav bar à droite */}
+        <NavBarRight showSignUp={toggle} username={username} />
+      </NavStyleBar>
+    </>
   );
 };
 
 /* Navigation bar Droite  */
-const NavBarRight = () => {
+const NavBarRight = ({ showSignUp, username }) => {
   return (
     <RightNav>
       <NavButton title="Espaces" />
       <NavButton title="Around Me" />
-      <NavButton title="Sign UP" />
+      <NavButton
+        title={username ? "Bienvenue " + username : "Sign IN"}
+        action={showSignUp}
+      />
       <NavButton icon="search" />
       <NavButton icon="mail" />
-
-      <NavButton />
     </RightNav>
   );
 };
@@ -59,7 +62,7 @@ const NavStyleBar = styled.nav`
 #04161a00
   )`};
 
-  background-color: ${props => (props.slide ? "trasnparent" : "#031517")};
+  background-color: ${props => (props.slide ? "transparent" : "#031517")};
 `;
 
 const RightNav = styled.div`

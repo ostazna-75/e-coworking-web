@@ -10,8 +10,8 @@ const SlideTwo = () => {
         Explorer tous les <br /> Coworking et devenez un <br /> E-co Worker
       </p>
 
-      <button>
-        <img src={arrow} />
+      <button onClick={() => {}}>
+        <img src={arrow} alt="arrow" />
         <p>Continue</p>
       </button>
     </StyledSlide>
