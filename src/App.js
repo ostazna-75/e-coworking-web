@@ -8,6 +8,7 @@ import Modal from "./SharedComponent/Modal";
 import useModal from "./Hooks/useModal";
 import SignUp from "./Views/8-SignUp/SignUp";
 import { useState } from "react";
+import ProductCategories from "./Views/4-Categories/ProductCategories";
 
 function App() {
   const { isShowing, toggle } = useModal();
@@ -22,6 +23,7 @@ function App() {
       <SlideOne toggle={toggle} username={user.username} />
       <SlideTwo />
       <SlideThree />
+      <ProductCategories />
     </div>
   );
 }
