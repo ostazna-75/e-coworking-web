@@ -10,7 +10,7 @@ import brasserie from "./Image/5-brasserie.jpg";
 const ProductCategories = () => {
   return (
     <Container>
-      <Text size="18pt">Choisis ta catégorie</Text>
+      <Text size="24pt">Choisis ta catégorie</Text>
       <Categories>
         {Cats.map(({ src, title }) => (
           <Card src={src}>{title}</Card>
@@ -40,7 +40,7 @@ const Text = styled.div`
   /* ... */
 `;
 const Categories = styled.div`
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -59,18 +59,21 @@ const Card = styled.div`
   :hover {
     color: #ffe699;
     border: solid 2px #ffe699;
+   -webkit-box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
+box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
   }
   padding-bottom: 2%;
   /* borderbox, permet de garder
    toute les tailles dans la sdiv    */
   box-sizing: border-box;
   /* bloc  */
-  width: 200px;
+  width: 220px;
   height: 200px;
   border-radius: 5%;
   border: solid 2px white;
   color: white;
-  text-shadow: black 0.1em 0.1em 0.1em;
+  text-shadow: 2px -1px 2px rgba(206,89,55,0.29);
   background-image: linear-gradient(
       to top,
       #0a9fa5,
