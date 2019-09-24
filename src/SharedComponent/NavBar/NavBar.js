@@ -18,16 +18,22 @@ const NavBar = ({ slide = false, toggle, username = "" }) => {
 
 /* Navigation bar Droite  */
 const NavBarRight = ({ showSignUp, username }) => {
+  const buttons = [
+    { title: "Espaces" },
+    { title: "Around Me" },
+    {
+      title: username ? "Bienvenue " + username : "Sign IN",
+      action: showSignUp
+    },
+    { icon: "search" },
+    { icon: "mail" }
+  ];
+
   return (
     <RightNav>
-      <NavButton title="Espaces" />
-      <NavButton title="Around Me" />
-      <NavButton
-        title={username ? "Bienvenue " + username : "Sign IN"}
-        action={showSignUp}
-      />
-      <NavButton icon="search" />
-      <NavButton icon="mail" />
+      {buttons.map(({ title, icon, action }) => (
+        <NavButton title={title} icon={icon} action={action} />
+      ))}
     </RightNav>
   );
 };
