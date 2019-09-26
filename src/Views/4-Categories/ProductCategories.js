@@ -12,6 +12,7 @@ const ProductCategories = () => {
     <Container>
       <Text size="24pt">Choisis ta catégorie</Text>
       <Categories>
+        {/* .map: permet de lire tous ce qu'il y'a dans le tableau. */}
         {Cats.map(({ src, title }) => (
           <Card src={src}>{title}</Card>
         ))}
@@ -22,7 +23,8 @@ const ProductCategories = () => {
     </Container>
   );
 };
-/* cats n'est pas dynamique alors on peut le mettre en dehors du composent */
+/* cats n'est pas dynamique alors on peut le 
+mettre en dehors du composent */
 const Cats = [
   { src: espaces, title: "Espaces" },
   { src: coffee, title: "Café" },
@@ -36,8 +38,6 @@ const Text = styled.div`
   font-size: ${props => props.size};
   text-align: center;
   margin-top: 10%;
-  /*     background-color: ${props => props.bgColor || "white"}; */
-  /* ... */
 `;
 const Categories = styled.div`
   margin-top: 5%;
