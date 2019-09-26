@@ -13,7 +13,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const { isShowing, toggle } = useModal();
-  const [user, setUser] = useState({ username: "" });
+  const [user, setUser] = useState( JSON.parse(localStorage.getItem('User')) || { username: "" } );
+  console.log(user);
+  
+
+  /* React.useState(
+    localStorage.getItem('myValueInLocalStorage') || ''
+  ); */
 
   return (
     <div style={{ position: "relative" }}>
