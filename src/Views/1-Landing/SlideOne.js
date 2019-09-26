@@ -7,10 +7,10 @@ import NavBar from "../../SharedComponent/NavBar/NavBar";
 import { Paragraph } from "../../SharedComponent/WithStyle";
 /* dans le fichier withstyle, il recherche un export Paragraph */
 
-const SlideOne = ({ toggle, username }) => {
+const SlideOne = ({ toggle, username, setUser }) => {
   return (
     <div className="SlideOne">
-      <NavBar slide={true} toggle={toggle} username={username} />
+      <NavBar slide={true} toggle={toggle} username={username} setUser={setUser} />
 
       <Container>
         <Logo big />
