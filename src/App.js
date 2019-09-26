@@ -21,12 +21,12 @@ function App() {
       <Modal isShowing={isShowing}>
         <SignUp hide={toggle} setUser={setUser} />
       </Modal>
-      <NavBar toggle={toggle} username={user.username} />
+      <NavBar toggle={toggle} username={user.username} setUser={setUser} />
       {/* la ou on va mettre les pages: pages 1, pages 2, pages3, pages4 */}
       <Router>
         <Switch>
           <Route path="/">
-            <Landing toggle={toggle} username={user.username} />
+            <Landing toggle={toggle} username={user.username} setUser={setUser} />
           </Route>
         </Switch>
       </Router>
@@ -34,10 +34,10 @@ function App() {
   );
 }
 
-const Landing = (toggle, username) => {
+const Landing = ({toggle, username, setUser}) => {
   return (
     <>
-      <SlideOne toggle={toggle} username={username} />
+      <SlideOne toggle={toggle} username={username} setUser={setUser} />
       <SlideTwo />
       <SlideThree />
       <ProductCategories />
