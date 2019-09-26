@@ -3,21 +3,21 @@ import styled from "styled-components";
 import NavButton from "./Components/NavButton";
 import Logo from "../Logo";
 
-const NavBar = ({ slide = false, toggle, username = "" }) => {
+const NavBar = ({ slide = false, toggle, username = "", setUser }) => {
   return (
     <>
       <NavStyleBar slide={slide}>
         {/* LOGO A GAUCHE  */}
         <Logo />
         {/* nav bar à droite */}
-        <NavBarRight showSignUp={toggle} username={username} />
+        <NavBarRight showSignUp={toggle} username={username} setUser={setUser}/>
       </NavStyleBar>
     </>
   );
 };
 
 /* Navigation bar Droite  */
-const NavBarRight = ({ showSignUp, username }) => {
+const NavBarRight = ({ showSignUp, username, setUser }) => {
   const buttons = [
     { title: "Espaces" },
     { title: "Around Me" },
@@ -25,6 +25,10 @@ const NavBarRight = ({ showSignUp, username }) => {
       title: username ? "Bienvenue " + username : "Sign IN",
       action: showSignUp
     },
+    { title: username ? "Se déconnecter " : "",
+  action : ()=> {
+    setUser({ username: "" })
+  } },
     { icon: "search" },
     { icon: "mail" }
   ];
