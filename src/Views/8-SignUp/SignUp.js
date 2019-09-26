@@ -34,6 +34,7 @@ const SignUp = ({ hide, setUser }) => {
       // toujours mettre sur le code front axios.get avec http au début
       //En revanche ne jamais mettre http dans postman : localhost:3000/signup
       setUser(response.data);
+      localStorage.setItem('User', JSON.stringify(response.data));
       hide();
     } catch (error) {
       setErrorMessage(error.response.data);
