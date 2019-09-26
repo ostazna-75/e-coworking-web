@@ -27,7 +27,8 @@ const NavBarRight = ({ showSignUp, username, setUser }) => {
     },
     { title: username ? "Se déconnecter " : "",
   action : ()=> {
-    setUser({ username: "" })
+    setUser({ username: "" });
+    localStorage.removeItem('User');
   } },
     { icon: "search" },
     { icon: "mail" }
