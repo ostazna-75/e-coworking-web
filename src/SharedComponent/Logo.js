@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 /* Logo E-co Working */
 
-const Logo = ({ big }) => {
+const Logo = ({ big, onClick }) => {
   return (
-    <LogoNav big={big}>
+    <LogoNav big={big} onClick={onClick}>
       <Eco big={big}>E</Eco>
       <Tire big={big}>-</Tire>
       <Co big={big}>co</Co>
@@ -20,6 +20,7 @@ const Logo = ({ big }) => {
 const LogoNav = styled.div`
   color: white;
   margin-top: ${props => props.big && `6%`};
+  cursor: ${props => props.onClick && `pointer`};
 `;
 
 const Eco = styled.span`
