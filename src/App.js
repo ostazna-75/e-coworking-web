@@ -44,7 +44,7 @@ function App() {
             />
           </Route>
           {/* Route Presentation */}
-          <Route path="/Presentation">
+          <Route path="/presentation">
             <Presentation />
           </Route>
           {/* ------------------------ */}
