@@ -6,8 +6,10 @@ import coffee from "./Image/2-coffee.jpg";
 import hotels from "./Image/3-hotels.png";
 import atelier from "./Image/4-atelier.jpg";
 import brasserie from "./Image/5-brasserie.jpg";
+import { useHistory } from "react-router-dom";
 
 const ProductCategories = () => {
+  const history = useHistory();
   return (
     <Container>
       <Text size="24pt">Choisis ta catégorie</Text>
@@ -15,7 +17,10 @@ const ProductCategories = () => {
         {/* .map: permet de lire tous ce qu'il y'a dans le tableau. */}
         {Cats.map(({ src, title }) => (
           /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
-          <Card src={src}>{title}</Card>
+          /* card : les catégories */
+          <Card src={src} onClick={() => history.push("/presentation")}>
+            {title}
+          </Card>
         ))}
       </Categories>
       <Text size="32pt">
