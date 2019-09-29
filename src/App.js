@@ -22,14 +22,16 @@ function App() {
 
   return (
     <div style={{ position: "relative" }}>
-      {/* en dehors du router */}
-      <Modal isShowing={isShowing}>
-        <SignUp hide={toggle} setUser={setUser} />
-      </Modal>
-      <NavBar toggle={toggle} username={user.username} setUser={setUser} />
-      {/* la ou on va mettre les pages: pages 1, pages 2, pages3, pages4 */}
       <Router>
         {/* permet d'aller a d'autre page */}
+
+        {/* en dehors du router */}
+        <Modal isShowing={isShowing}>
+          <SignUp hide={toggle} setUser={setUser} />
+        </Modal>
+        <NavBar toggle={toggle} username={user.username} setUser={setUser} />
+        {/* la ou on va mettre les pages: pages 1, pages 2, pages3, pages4 */}
+
         <Switch>
           {/* suivant ou tu est , mettre une route */}
           {/* Route = 1 route, 1 passage de base : "/"  -------  */}
