@@ -2,17 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import NavButton from "./Components/NavButton";
 import Logo from "../Logo";
+import { useHistory } from "react-router-dom";
 
 const NavBar = ({ slide = false, toggle, username = "", setUser }) => {
+  const history = useHistory();
   return (
     <>
       <NavStyleBar slide={slide}>
         {/* LOGO A GAUCHE  */}
-        <Logo
-          onClick={() => {
-            alert("bonjour");
-          }}
-        />
+        <Logo onClick={() => history.push("/")} />
         {/* nav bar à droite */}
         <NavBarRight
           showSignUp={toggle}
