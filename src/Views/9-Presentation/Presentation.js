@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../SharedComponent/Container";
 import { useLocation, useHistory } from "react-router-dom";
+import ContentImage from "./ContentImage";
 
 const Presentation = () => {
   const location = useLocation();
@@ -9,13 +10,7 @@ const Presentation = () => {
 
   return (
     <>
-      <Container
-        onClick={() => history.push("/")}
-        style={{ marginTop: "100px" }}
-      >
-        Composant avec image
-      </Container>
-
+      <ContentImage />
       <Container
         onClick={() => history.push("/")}
         style={{ marginTop: "100px" }}
