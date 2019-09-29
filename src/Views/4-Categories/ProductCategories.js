@@ -14,6 +14,7 @@ const ProductCategories = () => {
       <Categories>
         {/* .map: permet de lire tous ce qu'il y'a dans le tableau. */}
         {Cats.map(({ src, title }) => (
+          /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
           <Card src={src}>{title}</Card>
         ))}
       </Categories>
