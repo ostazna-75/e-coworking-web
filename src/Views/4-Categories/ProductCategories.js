@@ -64,7 +64,7 @@ const Card = styled.div`
   cursor: pointer;
   :hover {
     color: #ffe699;
-    border: solid 2px #ffe699;
+    border: solid 3px #ffe699;
    -webkit-box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
 -moz-box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
 box-shadow: 7px 4px 58px -41px rgba(0,0,0,0.75);
