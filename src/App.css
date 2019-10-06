@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  font-family: "SFUIDisplay-Bold";
+  src: url("./Assets/Fonts/SFUIDisplay-Bold.ttf");
+}
+
+@font-face {
   font-family: "Bradhitc";
   src: url("./Assets/Fonts/bradhitc.ttf");
 }
