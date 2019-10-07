@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 
 const ProductCategories = () => {
   const history = useHistory();
+  const wtf = "yoyoyo";
   return (
     <Container>
       <Text size="24pt">Choisis ta catégorie</Text>
@@ -18,7 +19,10 @@ const ProductCategories = () => {
         {Cats.map(({ src, title }) => (
           /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
           /* card : les catégories */
-          <Card src={src} onClick={() => history.push("/presentation")}>
+          <Card
+            src={src}
+            onClick={() => history.push("/presentation/" + title)}
+          >
             {title}
           </Card>
         ))}

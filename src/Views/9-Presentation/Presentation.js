@@ -4,6 +4,7 @@ import { useLocation, useHistory } from "react-router-dom";
 import ContentImage from "./ContentImage";
 import styled from "styled-components";
 import espaces from "../4-Categories/Image/1-espaces.jpg";
+import cofee from "../4-Categories/Image/2-coffee.jpg";
 import avatar from "./Image/Icons/avatar.png";
 import iconlocation from "./Image/Icons/location.png";
 import DraftCowork from "./Image/draft.jpg";
@@ -12,7 +13,8 @@ import axios from "axios";
 const Presentation = () => {
   const location = useLocation();
   const history = useHistory();
-  console.log({ location });
+  const weAreHere = location && location.pathname.split("/")[2];
+  console.log({ weAreHere });
 
   const { list } = useData();
 
@@ -24,14 +26,10 @@ const Presentation = () => {
       <Container>
         <UpContainer>
           <LeftContent>
-            {Cats.map(({ src }) => (
-              /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
-              /* card : les catégories */
-              <Card
-                src={src}
-                onClick={() => history.push("/ProductCategories")}
-              ></Card>
-            ))}
+            {/*   /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
+            /* card : les catégories */}
+
+            <Card src={espaces} onClick={() => history.push("/")}></Card>
           </LeftContent>
           <RightContent>
             <Option>Vous souhaitez plus d'options ?</Option>
@@ -43,7 +41,7 @@ const Presentation = () => {
                     /* METTRE LE ONCLICK DANS LE CARD VERS PRESENTATION */
                     /* card : les catégories */
                     <TextFilt
-                      onClick={() => history.push("/ProductCategories")}
+                    /*   onClick={() => history.push("/ProductCategories")} */
                     >
                       {title}
                     </TextFilt>
@@ -115,18 +113,23 @@ const useData = () => {
 const SpaceListing = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  min-width: 100%;
+  overflow-x: auto;
+  ::-webkit-scrollbar {
+    /*  display: none; */
+  }
 `;
 
 const Cowork = styled.div`
   display: flex;
   flex-direction: column;
   height: 260px;
-  width: 250px;
+  min-width: 250px;
   border: 1px solid #ffe699;
   border-radius: 5%;
   /* background-color: orange; */
   margin-top: 20px;
+  margin-right: 60px;
   overflow: hidden;
 `;
 
